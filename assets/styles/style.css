@@ -20,7 +20,6 @@
     outline: none;
     border: none;
     list-style-type: none;
-    color: #fff;
 }
 
 html,
@@ -55,6 +54,12 @@ section {
     font-size: 5rem;
 }
 
+.btn {
+    padding: 16px 40px;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+}
+
 
 /* HEADER */
 
@@ -84,6 +89,7 @@ footer .container ul .ul-container {
 header .container ul li a {
     display: inline-flex;
     align-items: center;
+    color: #fff;
 }
 
 header .container ul li:not(:first-child) {
@@ -143,6 +149,7 @@ main::before {
     justify-content: center;
     flex-direction: column;
     position: relative;
+    color: #fff;
 }
 
 #banner::before {
@@ -174,7 +181,7 @@ main::before {
 /* SECTIONS */
 
 #sections {
-    width: 90%;
+    width: 1600px;
     background-color: #fff;
     z-index: 1;
 }
@@ -191,6 +198,7 @@ main::before {
     color: #f00;
     font-size: 3.5rem;
     margin: 5vh 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -205,4 +213,292 @@ main::before {
 #transportation .container .card {
     width: 20%;
     background-color: var(--main-color);
+    font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.75rem;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+#transportation .container .card .icon svg {
+    width: 128px;
+    height: 128px;
+}
+
+#bus-park .container {
+    width: 90%;
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#bus-park .container .bus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 45%;
+    background-color: #E0E0E0;
+    border-radius: 1rem;
+    margin-bottom: 5vh;
+    overflow: hidden;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+#bus-park .container .bus .img {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+#bus-park .container .bus .img img {
+    width: auto;
+    height: 100%;
+}
+
+#bus-park .container .bus .name-bus {
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+#bus-park .container .bus .descript {
+    width: 90%;
+}
+
+#bus-park .container .bus .descript ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#bus-park .container .bus .descript ul li {
+    margin-top: 10px;
+    font-size: 1.4em;
+    width: 100%;
+}
+
+#bus-park .container .bus .descript ul li strong {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+#bus-park .container .bus .descript ul li strong i {
+    width: 23px;
+    height: 23px;
+}
+
+#bus-park .container .bus .btn-order {
+    background-color: #f00;
+    color: #E0E0E0;
+    margin: 20px 0;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+}
+
+#bus-park .container .bus .btn-order:hover {
+    background-color: #fff;
+    color: #f00;
+    border: 5px solid #f00;
+}
+
+
+/* REVIEWS */
+
+#reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f00;
+}
+
+#reviews .section-name {
+    margin-top: 0 !important;
+    color: #fff !important;
+}
+
+#reviews .reviews {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    width: 95%;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+#reviews .reviews::-webkit-scrollbar {
+    display: none;
+}
+
+#reviews .reviews .review {
+    min-width: 400px;
+    box-sizing: content-box;
+    height: auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#reviews .reviews .review h3,
+#reviews .reviews .review span {
+    width: 100%;
+}
+
+#reviews .reviews .review h3 {
+    font-size: 1.1rem;
+    font-weight: bold
+}
+
+#reviews div div span.time {
+    font-size: 1.2rem;
+    color: grey;
+    margin-bottom: 5px;
+}
+
+#reviews div div span.author-review {
+    font-size: 1.075rem;
+}
+
+
+/* FORM */
+
+#form {
+    background-color: #f00;
+}
+
+#form .section-name {
+    color: #fff !important;
+}
+
+#form form {
+    width: 800px;
+    background-color: #fff;
+    color: #f00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+#form form::before {
+    position: absolute;
+    content: "";
+    height: 90%;
+    width: 20px;
+    background-color: #fff;
+    left: -40px;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+}
+
+#form form::after {
+    position: absolute;
+    content: "";
+    height: 90%;
+    width: 20px;
+    background-color: #fff;
+    right: -40px;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    transform: rotate(180deg);
+}
+
+#form form .inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#form form .inputs .input:not(:first-child) {
+    margin-top: 20px;
+}
+
+#form form .inputs .input h3 {
+    margin-bottom: 3px;
+}
+
+#form form .inputs .input input {
+    border: #f00 3px solid;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    padding-left: 16px;
+    border-radius: 16px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #f00;
+}
+
+#form form .inputs .label {
+    display: inline-flex;
+}
+
+#form form .inputs .label input {
+    display: none;
+}
+
+#form form .inputs .label input+label {
+    position: relative;
+    display: inline-flex;
+    align-items: end;
+}
+
+#form form .inputs .label input+label span {
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+#form form .inputs .label input+label span::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2.5px solid #f00;
+    box-sizing: border-box;
+    margin-left: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form form .inputs .label input:checked+label span::before {
+    content: "✓";
+    font-weight: bold;
+}
+
+#form form .btn {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 3px solid #f00;
+    box-sizing: border-box;
+    color: #f00;
+    font-weight: bold;
+}
+
+#form form .btn:hover {
+    background-color: #f00;
+    color: #fff;
 }
