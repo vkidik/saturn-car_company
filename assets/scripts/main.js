@@ -28,18 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener('click', () => {
             disabledBtns()
             if (btn == leftBtn) {
-                console.log(Number(slider.scrollWidth / -3), 0);
                 slider.scrollBy(Number(slider.scrollWidth / -3), 0)
             }
             if (btn == rightBtn) {
-                console.log("right");
                 slider.scrollBy(Number(slider.scrollWidth / 3), 0)
             }
         })
 
 
     });
-
-    console.log(slider);
-    console.log(btns);
 })

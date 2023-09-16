@@ -1,3 +1,210 @@
+@media screen and (max-width: 767px) and (min-width: 320px) {
+    #sections {
+        width: 100%;
+    }
+    #bus-park .container .bus {
+        width: 100%;
+    }
+    #banner h2 {
+        font-size: 5em;
+        margin-bottom: 2.5%;
+    }
+    header nav ul .url-container a.hrefs,
+    footer nav ul .url-container a.hrefs {
+        font-size: 1.25rem;
+    }
+    #transportation .container .card {
+        width: 100%;
+    }
+    #transportation .container .card:not(:first-child) {
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width: 1066px) {
+    #banner {
+        background-image: url(../pictures/photo_5460695921093366719_y.jpg)
+    }
+}
+
+@media screen and (min-width: 420px) {
+    #reviews .reviews .review {
+        min-width: 400px;
+    }
+    .logo .right h1 {
+        font-size: 5rem;
+        font-family: Inter;
+        font-weight: lighter;
+    }
+    .logo .right span {
+        font-size: 1.5rem;
+        font-family: Inter;
+        font-weight: lighter;
+    }
+    #sections section .section-name {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    #reviews .reviews .review {
+        width: 320px;
+    }
+    .logo .right h1 {
+        font-size: 3rem;
+        font-family: Inter;
+        font-weight: bold;
+    }
+    .logo .right span {
+        font-size: 1rem;
+        font-family: Inter;
+        font-weight: lighter;
+    }
+    #sections section .section-name {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo svg {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .logo {
+        margin-left: 10%;
+    }
+    #transportation .section-name {
+        margin-bottom: 0;
+    }
+    header nav ul .url-container,
+    footer nav ul .url-container {
+        margin-left: 100px;
+    }
+    #transportation .container .card {
+        width: 35%;
+        margin-top: 5vh;
+    }
+    #bus-park .container .bus {
+        width: 60%;
+    }
+    #banner h2 {
+        font-size: 7.55em;
+        margin-bottom: 2.5%;
+    }
+    #sections {
+        width: 100%;
+    }
+    #transportation .section-name {
+        margin-bottom: 0 !important;
+    }
+    #transportation .container {
+        justify-content: space-evenly;
+    }
+    #reviews .reviews {
+        width: 85%;
+    }
+    #form form {
+        width: 800px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #sections {
+        width: 1280px;
+    }
+    #bus-park .container .bus {
+        width: 42.5%;
+    }
+    #transportation .container {
+        justify-content: space-around;
+    }
+    #transportation .container .card {
+        width: 18%;
+    }
+    #banner h2 {
+        font-size: 10em;
+        line-height: 150%;
+        margin-bottom: -1.5rem;
+    }
+    #reviews .reviews {
+        width: 89%;
+    }
+}
+
+@media screen and (min-width: 1880px) {
+    header nav ul .url-container,
+    footer nav ul .url-container {
+        flex-direction: row;
+        align-items: center;
+    }
+    header nav ul .url-container a.hrefs:not(:first-child),
+    footer nav ul .url-container a.hrefs:not(:first-child) {
+        margin-left: 3vw;
+    }
+    #form form {
+        width: 800px;
+    }
+    #form form::before {
+        position: absolute;
+        content: "";
+        height: 90%;
+        width: 20px;
+        background-color: #fff;
+        left: -40px;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    }
+    #form form::after {
+        position: absolute;
+        content: "";
+        height: 90%;
+        width: 20px;
+        background-color: #fff;
+        right: -40px;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+        transform: rotate(180deg);
+    }
+    #form form .left-element {
+        position: absolute;
+        height: 75%;
+        background-color: #fff;
+        width: 20px;
+        left: -80px;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    }
+    #form form .left2-element {
+        position: absolute;
+        height: 60%;
+        background-color: #fff;
+        width: 20px;
+        left: -120px;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    }
+    #form form .right-element {
+        position: absolute;
+        height: 75%;
+        background-color: #fff;
+        width: 20px;
+        right: -80px;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+        transform: rotate(180deg);
+    }
+    #form form .right2-element {
+        position: absolute;
+        height: 60%;
+        background-color: #fff;
+        width: 20px;
+        right: -120px;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+        transform: rotate(180deg);
+    }
+    header nav ul .url-container a.hrefs,
+    footer nav ul .url-container a.hrefs {
+        font-size: 1.75rem;
+    }
+}
+
 @font-face {
     font-family: BebasTam;
     src: url(../fonts/BebasTam/BebasTam.ttf);
@@ -23,6 +230,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    font-size: 16px;
+}
+
 html,
 body,
 header,
@@ -30,7 +241,6 @@ main,
 section {
     width: 100%;
     height: auto;
-    font-size: 1em;
 }
 
 .logo {
@@ -51,10 +261,6 @@ section {
     margin-left: 10px;
 }
 
-.logo .right h1 {
-    font-size: 5rem;
-}
-
 .btn {
     padding: 16px 40px;
     font-size: 1.5rem;
@@ -65,48 +271,56 @@ section {
 
 /* HEADER */
 
-header .container,
-footer .container {
+header,
+footer {
     width: 100%;
     font-family: Inter;
     color: var(--font-color);
     background-image: url("../pictures/SVG/Ресурс\ 4.svg");
 }
 
-header .container ul,
-footer .container ul {
+header nav,
+footer nav {
     width: 99%;
     background-color: var(--main-color);
     clip-path: polygon(0 0, 0 100%, 80% 100%, 100% 0);
 }
 
-header .container ul .ul-container,
-footer .container ul .ul-container {
+header nav .ul-container,
+footer nav .ul-container {
     width: calc(100% - 20%);
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 
-header .container ul li div a {
+header nav ul li a,
+footer nav ul li a {
     display: inline-flex;
     align-items: center;
     color: #fff;
 }
 
-header .container ul li div a.hrefs span:hover {
+header nav ul .url-container,
+footer nav ul .url-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul .url-container a.hrefs:hover span,
+footer nav ul .url-container a.hrefs:hover span {
     text-decoration: underline;
 }
 
-header .container ul li div:not(:first-child) {
+header nav ul li a:not(:first-child),
+footer nav ul li a:not(:first-child) {
     font-weight: bold;
 }
 
-header .container ul li div a.hrefs {
-    font-size: 1.75rem;
-}
-
-header .container ul li div a.hrefs .icon {
+header nav ul .url-container a.hrefs .icon,
+footer nav ul .url-container a.hrefs .icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -118,7 +332,8 @@ header .container ul li div a.hrefs .icon {
     padding: 5px;
 }
 
-header .container ul li div a.hrefs .icon> :only-child {
+header nav ul .url-container a.hrefs .icon> :only-child,
+footer nav ul .url-container a.hrefs .icon> :only-child {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,7 +366,6 @@ main::before {
 
 #banner {
     width: 100%;
-    background-image: url("../pictures/photo_5460695921093366719_y.jpg");
     height: 600px;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -162,6 +376,7 @@ main::before {
     flex-direction: column;
     position: relative;
     color: #fff;
+    text-align: center;
 }
 
 #banner::before {
@@ -175,12 +390,9 @@ main::before {
 }
 
 #banner h2 {
-    font-size: 10em;
-    line-height: 150%;
     font-family: BebasTam;
     font-style: italic;
     font-weight: lighter;
-    margin-bottom: -1.5rem;
     z-index: 2;
 }
 
@@ -193,7 +405,6 @@ main::before {
 /* SECTIONS */
 
 #sections {
-    width: 1600px;
     background-color: #fff;
     z-index: 1;
 }
@@ -208,9 +419,9 @@ main::before {
 
 #sections section .section-name {
     color: #CB1D18;
-    font-size: 3.5rem;
     margin: 5vh 0;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 
@@ -218,19 +429,19 @@ main::before {
 
 #transportation .container {
     width: 95%;
-    display: inline-flex;
-    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 #transportation .container .card {
-    width: 18%;
     background-color: var(--main-color);
-    font-size: 2rem;
+    font-size: 1rem;
     display: inline-flex;
     align-items: center;
     justify-content: space-around;
     border-radius: 0.75rem;
-    padding: 20px 43px;
+    padding: 10px 20px;
     color: #fff;
 }
 
@@ -246,8 +457,8 @@ main::before {
 }
 
 #transportation .container .card .icon> :only-child {
-    width: 128px;
-    height: 128px;
+    width: 4rem;
+    height: 4rem;
 }
 
 #bus-park {
@@ -271,7 +482,6 @@ main::before {
     flex-direction: column;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    width: 40%;
     background-color: #E0E0E0;
     border-radius: 1rem;
     margin-top: 0;
@@ -306,6 +516,7 @@ main::before {
     font-size: 2rem;
     margin-top: 50px;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 #bus-park .container .bus .descript {
@@ -415,11 +626,11 @@ main::before {
 }
 
 #reviews>div.review-block .btns-container .btns .left {
-    left: 1.5%;
+    left: 0.75%;
 }
 
 #reviews>div.review-block .btns-container .btns .right {
-    right: 1.5%;
+    right: 0.75%;
 }
 
 #reviews .reviews {
@@ -427,7 +638,6 @@ main::before {
     overflow-y: hidden;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    width: 89%;
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
@@ -439,7 +649,6 @@ main::before {
 }
 
 #reviews .reviews .review {
-    min-width: 400px;
     box-sizing: content-box;
     height: auto;
     background-color: #ffffff;
@@ -489,7 +698,6 @@ main::before {
 }
 
 #form form {
-    width: 800px;
     height: auto;
     background-color: #fff;
     color: #CB1D18;
@@ -504,65 +712,6 @@ main::before {
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
     flex: none;
-}
-
-#form form::before {
-    position: absolute;
-    content: "";
-    height: 90%;
-    width: 20px;
-    background-color: #fff;
-    left: -40px;
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-}
-
-#form form::after {
-    position: absolute;
-    content: "";
-    height: 90%;
-    width: 20px;
-    background-color: #fff;
-    right: -40px;
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-    transform: rotate(180deg);
-}
-
-#form form .left-element {
-    position: absolute;
-    height: 75%;
-    background-color: #fff;
-    width: 20px;
-    left: -80px;
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-}
-
-#form form .left2-element {
-    position: absolute;
-    height: 60%;
-    background-color: #fff;
-    width: 20px;
-    left: -120px;
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-}
-
-#form form .right-element {
-    position: absolute;
-    height: 75%;
-    background-color: #fff;
-    width: 20px;
-    right: -80px;
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-    transform: rotate(180deg);
-}
-
-#form form .right2-element {
-    position: absolute;
-    height: 60%;
-    background-color: #fff;
-    width: 20px;
-    right: -120px;
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-    transform: rotate(180deg);
 }
 
 #form form .inputs {
