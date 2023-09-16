@@ -27,7 +27,7 @@
     }
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 440px) {
     #reviews .reviews .review {
         min-width: 400px;
     }
@@ -44,12 +44,21 @@
     #sections section .section-name {
         font-size: 3.5rem;
     }
+    #form form .inputs .label input+label span{
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 439px){
+    #reviews .reviews .review {
+        min-width: 320px !important;
+    }
+    #form form .inputs .label input+label span{
+        font-size: 1.25rem;
+    }
 }
 
 @media screen and (max-width: 399px) {
-    #reviews .reviews .review {
-        width: 320px;
-    }
     .logo .right h1 {
         font-size: 3rem;
         font-family: Inter;
@@ -67,6 +76,12 @@
 
 @media screen and (max-width: 600px) {
     .logo svg {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    #reviews .btns-container{
         display: none;
     }
 }
@@ -114,6 +129,9 @@
     #sections {
         width: 1280px;
     }
+    #reviews .btns-container{
+        display: inline-flex;
+    }
     #bus-park .container .bus {
         width: 42.5%;
     }
@@ -131,20 +149,8 @@
     #reviews .reviews {
         width: 89%;
     }
-}
-
-@media screen and (min-width: 1880px) {
-    header nav ul .url-container,
-    footer nav ul .url-container {
-        flex-direction: row;
-        align-items: center;
-    }
-    header nav ul .url-container a.hrefs:not(:first-child),
-    footer nav ul .url-container a.hrefs:not(:first-child) {
-        margin-left: 3vw;
-    }
-    #form form {
-        width: 800px;
+    #form form{
+        width: 70%;
     }
     #form form::before {
         position: absolute;
@@ -198,6 +204,21 @@
         right: -120px;
         clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
         transform: rotate(180deg);
+    }
+}
+
+@media screen and (min-width: 1880px) {
+    header nav ul .url-container,
+    footer nav ul .url-container {
+        flex-direction: row;
+        align-items: center;
+    }
+    header nav ul .url-container a.hrefs:not(:first-child),
+    footer nav ul .url-container a.hrefs:not(:first-child) {
+        margin-left: 3vw;
+    }
+    #form form {
+        width: 800px;
     }
     header nav ul .url-container a.hrefs,
     footer nav ul .url-container a.hrefs {
@@ -572,6 +593,7 @@ main::before {
     align-items: center;
     justify-content: center;
     background-color: #CB1D18;
+    position: relative;
 }
 
 #reviews .section-name {
@@ -579,61 +601,8 @@ main::before {
     color: #fff !important;
 }
 
-#reviews>div.review-block {
-    width: 100%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-#reviews>div.review-block .btns-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#reviews>div.review-block .btns-container .btns {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-#reviews>div.review-block .btns-container .btns button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff;
-    color: #CB1D18;
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: absolute;
-}
-
-#reviews>div.review-block .btns-container .btns button:hover {
-    cursor: pointer;
-}
-
-#reviews>div.review-block .btns-container .btns button:active {
-    filter: brightness(0.8);
-}
-
-#reviews>div.review-block .btns-container .btns button:disabled {
-    filter: brightness(0.5);
-    cursor: not-allowed;
-}
-
-#reviews>div.review-block .btns-container .btns .left {
-    left: 0.75%;
-}
-
-#reviews>div.review-block .btns-container .btns .right {
-    right: 0.75%;
-}
-
 #reviews .reviews {
+    width: 95%;
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -641,11 +610,46 @@ main::before {
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
+    z-index: 2;
     /* Firefox */
 }
 
 #reviews .reviews::-webkit-scrollbar {
     display: none;
+}
+
+#reviews .btns-container {
+    position: absolute;
+    z-index: 1;
+    bottom: -55px;
+    right: 2.5%;
+}
+
+#reviews .btns-container button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #CB1D18;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#reviews .btns-container button:first-child{
+    margin-right: 10px;
+}
+
+#reviews .btns-container button:hover {
+    cursor: pointer;
+}
+
+#reviews .btns-container button:active {
+    filter: brightness(0.8);
+}
+
+#reviews> .btns-container button:disabled {
+    filter: brightness(0.5);
+    cursor: not-allowed;
 }
 
 #reviews .reviews .review {
@@ -731,6 +735,7 @@ main::before {
 #form form .inputs .input input {
     border: #CB1D18 3px solid;
     width: 100%;
+    background-color: transparent;
     box-sizing: border-box;
     padding: 8px;
     padding-left: 16px;
@@ -738,6 +743,11 @@ main::before {
     font-size: 1.15rem;
     font-weight: bold;
     color: #CB1D18;
+}
+
+#form form .inputs .input input[type=date],
+#form form .inputs .input input[type=time]{
+    height: calc(20px + 1.5rem);
 }
 
 #form form .inputs .label {
@@ -758,7 +768,6 @@ main::before {
 #form form .inputs .label input+label span {
     margin-left: 50px;
     font-weight: bold;
-    font-size: 1.75rem;
 }
 
 #form form .inputs .label input+label span::before {

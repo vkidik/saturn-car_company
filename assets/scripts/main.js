@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Disagned by Vkdik");
-    let slider = document.querySelector("#reviews > div > div.reviews")
-    let btns = document.querySelector("#reviews > div > div.btns-container")
-    let leftBtn = document.querySelector("#reviews > div > div.btns-container > div > button.left")
-    let rightBtn = document.querySelector("#reviews > div > div.btns-container > div > button.right")
+    let slider = document.querySelector("#reviews div.reviews")
+    let btns = document.querySelector("#reviews div.btns-container")
+    let leftBtn = document.querySelector("#reviews > div.btns-container > button.left")
+    let rightBtn = document.querySelector("#reviews > div.btns-container > button.right")
     if (Number(slider.getBoundingClientRect().width) == Number(slider.scrollWidth)) {
         btns.style.display = "none"
     }
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     disabledBtns()
 
-    document.querySelectorAll("#reviews > div > div.btns-container button").forEach(btn => {
+    document.querySelectorAll("#reviews div.btns-container button").forEach(btn => {
         btn.addEventListener('click', () => {
             disabledBtns()
             if (btn == leftBtn) {
