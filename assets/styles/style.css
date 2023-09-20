@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) and (min-width: 320px) {
+@media screen and (max-width: 768px) and (min-width: 320px) {
     #sections {
         width: 100%;
     }
@@ -18,6 +18,18 @@
     }
     #transportation .container .card:not(:first-child) {
         margin-top: 5%;
+    }
+    #bus-park .container .bus .descript ul li {
+        font-size: 1em;
+    }
+    #dialog-img-container .container {
+        transform: scale(0.8);
+    }
+    #dialog-img-container .container .btns {
+        display: none;
+    }
+    #dialog-img-container>div.container>.main {
+        width: 100vw;
     }
 }
 
@@ -44,16 +56,19 @@
     #sections section .section-name {
         font-size: 3.5rem;
     }
-    #form form .inputs .label input+label span{
+    #form form .inputs .label input+label span {
         font-size: 1.75rem;
+    }
+    #dialog-img-container>div.container>div.img-container {
+        width: 600px;
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 439px){
+@media screen and (min-width: 320px) and (max-width: 439px) {
     #reviews .reviews .review {
         min-width: 320px !important;
     }
-    #form form .inputs .label input+label span{
+    #form form .inputs .label input+label span {
         font-size: 1.25rem;
     }
 }
@@ -72,6 +87,9 @@
     #sections section .section-name {
         font-size: 2.5rem;
     }
+    #dialog-img-container>div.container>div.img-container {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -81,12 +99,12 @@
 }
 
 @media screen and (min-width: 320px) {
-    #reviews .btns-container{
+    #reviews .btns-container {
         display: none;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 769px) and (max-width: 1279px) {
     .logo {
         margin-left: 10%;
     }
@@ -123,13 +141,25 @@
     #form form {
         width: 800px;
     }
+    #bus-park .container .bus .descript ul li {
+        font-size: 1.2em;
+    }
+    #dialog-img-container .container .btns {
+        display: flex;
+    }
+    #dialog-img-container>div.container>.main {
+        height: 500px;
+    }
 }
 
 @media screen and (min-width: 1280px) {
     #sections {
         width: 1280px;
     }
-    #reviews .btns-container{
+    #dialog-img-container .container .btns {
+        display: flex;
+    }
+    #reviews .btns-container {
         display: inline-flex;
     }
     #bus-park .container .bus {
@@ -149,7 +179,7 @@
     #reviews .reviews {
         width: 89%;
     }
-    #form form{
+    #form form {
         width: 70%;
     }
     #form form::before {
@@ -204,6 +234,9 @@
         right: -120px;
         clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
         transform: rotate(180deg);
+    }
+    #bus-park .container .bus .descript ul li {
+        font-size: 1.4em;
     }
 }
 
@@ -511,12 +544,24 @@ main::before {
     height: auto;
 }
 
+#bus-park .container .bus .img:hover {
+    cursor: pointer;
+}
+
 #bus-park .container .bus .img {
     width: 100%;
     height: 350px;
     display: flex;
     justify-content: center;
     position: relative;
+}
+
+#bus-park .container .bus .img::before {
+    position: absolute;
+    content: "Больше фотографий ⮞";
+    color: #FFF;
+    bottom: 10px;
+    z-index: 3;
 }
 
 #bus-park .container .bus .img .blur {
@@ -554,7 +599,6 @@ main::before {
 
 #bus-park .container .bus .descript ul li {
     margin-top: 10px;
-    font-size: 1.4em;
     width: 100%;
 }
 
@@ -582,6 +626,76 @@ main::before {
     background-color: #fff;
     color: #CB1D18;
     border: 5px solid #CB1D18;
+}
+
+#dialog-img-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+#dialog-img-container .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+#dialog-img-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+#dialog-img-container .container .main {
+    margin-bottom: 50px;
+}
+
+#dialog-img-container .container .img-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    overflow: hidden;
+}
+
+#dialog-img-container .container .img-container::-webkit-scrollbar {
+    display: none;
+}
+
+#dialog-img-container .container .img-container img {
+    height: 100px;
+}
+
+#dialog-img-container .container .img-container img:not(:first-child) {
+    margin-left: 50px;
+}
+
+#dialog-img-container .container .btns {
+    position: absolute;
+    width: 750px;
+    bottom: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#dialog-img-container .container .btns .btn {
+    width: 50px;
+    height: 50px;
+    background-color: #CB1D18AA;
+    color: #fff;
+    padding: 0;
 }
 
 
@@ -635,7 +749,7 @@ main::before {
     font-weight: bold;
 }
 
-#reviews .btns-container button:first-child{
+#reviews .btns-container button:first-child {
     margin-right: 10px;
 }
 
@@ -647,7 +761,7 @@ main::before {
     filter: brightness(0.8);
 }
 
-#reviews> .btns-container button:disabled {
+#reviews>.btns-container button:disabled {
     filter: brightness(0.5);
     cursor: not-allowed;
 }
@@ -746,7 +860,7 @@ main::before {
 }
 
 #form form .inputs .input input[type=date],
-#form form .inputs .input input[type=time]{
+#form form .inputs .input input[type=time] {
     height: calc(20px + 1.5rem);
 }
 

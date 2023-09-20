@@ -34,7 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 slider.scrollBy(Number(slider.scrollWidth / 3), 0)
             }
         })
-
-
     });
+
+    document.querySelectorAll(".bus .img").forEach(container => {
+        container.addEventListener('click', () => {
+            document.querySelector("#dialog-img-container").style.display = "flex"
+        })
+    });
+    document.querySelector("#dialog-img-container .background").addEventListener('click', () => {
+        document.querySelector("#dialog-img-container").style.display = "none"
+    })
 })
