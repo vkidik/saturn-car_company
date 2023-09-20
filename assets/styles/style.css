@@ -31,6 +31,9 @@
     #dialog-img-container>div.container>.main {
         width: 100vw;
     }
+    #dialog-img-container>div.container>div.img-container {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1066px) {
@@ -59,9 +62,6 @@
     #form form .inputs .label input+label span {
         font-size: 1.75rem;
     }
-    #dialog-img-container>div.container>div.img-container {
-        width: 600px;
-    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 439px) {
@@ -86,9 +86,6 @@
     }
     #sections section .section-name {
         font-size: 2.5rem;
-    }
-    #dialog-img-container>div.container>div.img-container {
-        width: 100%;
     }
 }
 
@@ -149,6 +146,9 @@
     }
     #dialog-img-container>div.container>.main {
         height: 500px;
+    }
+    #dialog-img-container>div.container>div.img-container {
+        width: 600px;
     }
 }
 
