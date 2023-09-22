@@ -1,3 +1,13 @@
+const findIndex = (a, o) => {
+    let index = 0
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] == o) {
+            index = i
+            return index
+        }
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Disagned by Vkdik");
     let slider = document.querySelector("#reviews div.reviews")
@@ -36,12 +46,81 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     });
 
+    let imgArray = []
     document.querySelectorAll(".bus .img").forEach(container => {
         container.addEventListener('click', () => {
             document.querySelector("#dialog-img-container").style.display = "flex"
         })
+        imgArray = [
+            "assets/pictures/photo_5460695921093366719_y.jpg",
+            "assets/pictures/photo_5460695921093366719_y.jpg",
+            "assets/pictures/photo_5460695921093366719_y.jpg",
+            "assets/pictures/photo_5460695921093366719_y.jpg",
+            "assets/pictures/photo_5460695921093366719_y.jpg"
+        ]
+
+        document.querySelectorAll('#dialog-img-container .img-container img').forEach(img => {
+            img.remove()
+        })
+
+        for (let i = 0; i < imgArray.length; i++) {
+            let img = document.createElement('img')
+            img.src = imgArray[i]
+            document.querySelector('#dialog-img-container .img-container').appendChild(img)
+        }
+
+        document.querySelector("#dialog-img-container .main").src = document.querySelector("#dialog-img-container .img-container img:nth-child(1)").src
+        document.querySelectorAll("#dialog-img-container .img-container img").forEach(img => {
+            img.style.filter = "brightness(0.3)"
+        });
+        document.querySelector("#dialog-img-container .img-container img:nth-child(1)").style.filter = "brightness(1)"
+        document.querySelector("#dialog-img-container .img-container img:nth-child(1)").setAttribute("disabled", '')
     });
+
+    document.querySelectorAll('#dialog-img-container .img-container img').forEach(img => {
+        img.addEventListener('click', () => {
+            img.style.filter = "brightness(0.3)"
+
+            document.querySelectorAll("#dialog-img-container .img-container img[disabled]").forEach(disabledImg => {
+                disabledImg.style.filter = "brightness(0.3)"
+                disabledImg.removeAttribute('disabled')
+            });
+
+            document.querySelector("#dialog-img-container .main").src = img.src
+            img.style.filter = "brightness(1)"
+            img.setAttribute("disabled", '')
+        })
+    });
+
+    // document.querySelectorAll('#dialog-img-container .btns .btn').forEach(btn => {
+    //     let index = findIndex(document.querySelectorAll('#dialog-imf-container .img-container img'), document.querySelector("#dialog-img-container .img-container img[disabled]"))
+    //     btn.addEventListener('click', () => {
+    //         if (btn.classList.contains('left')) {
+    //             if (index != 0) {
+    //                 index--
+
+    //                 document.querySelectorAll('#dialog-img-container .img-container img').forEach(img => {
+    //                     img.style.filter = "brightness(0.3)"
+    //                     document.querySelectorAll("#dialog-img-container .img-container img[disabled]").forEach(disabledImg => {
+    //                         disabledImg.style.filter = "brightness(0.3)"
+    //                         disabledImg.removeAttribute('disabled')
+    //                     });
+    //                 });
+
+    //                 document.querySelectorAll('#dialog-imf-container .img-container img')[index]
+    //                 document.querySelector("#dialog-img-container .main").src = document.querySelectorAll('#dialog-imf-container .img-container img')[index].src
+    //                 document.querySelectorAll('#dialog-imf-container .img-container img')[index].style.filter = "brightness(1)"
+    //                 document.querySelectorAll('#dialog-imf-container .img-container img')[index].setAttribute("disabled", '')
+    //             }
+    //         }
+    //     })
+    // });
+
     document.querySelector("#dialog-img-container .background").addEventListener('click', () => {
         document.querySelector("#dialog-img-container").style.display = "none"
+        document.querySelectorAll('#dialog-img-container .img-container img').forEach(img => {
+            img.remove()
+            document.querySelector("#dialog-img-container .main").src = ''
+        })
     })
 })

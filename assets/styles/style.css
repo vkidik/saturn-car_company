@@ -148,11 +148,17 @@
         height: 500px;
     }
     #dialog-img-container>div.container>div.img-container {
-        width: 600px;
+        width: 800px;
     }
 }
 
 @media screen and (min-width: 1280px) {
+    #dialog-img-container>div.container>div.img-container {
+        width: 800px;
+    }
+    #dialog-img-container>div.container>.main {
+        height: 500px;
+    }
     #sections {
         width: 1280px;
     }
@@ -678,13 +684,21 @@ main::before {
     height: 100px;
 }
 
+#dialog-img-container .container .img-container img:hover {
+    cursor: pointer;
+}
+
+#dialog-img-container .container .img-container img:disabled {
+    cursor: not-allowed;
+}
+
 #dialog-img-container .container .img-container img:not(:first-child) {
     margin-left: 50px;
 }
 
 #dialog-img-container .container .btns {
     position: absolute;
-    width: 750px;
+    width: 115%;
     bottom: 25px;
     flex-direction: row;
     justify-content: space-between;
