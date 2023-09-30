@@ -22,18 +22,6 @@
     #bus-park .container .bus .descript ul li {
         font-size: 1em;
     }
-    #dialog-img-container .container {
-        transform: scale(0.8);
-    }
-    #dialog-img-container .container .btns {
-        display: none;
-    }
-    #dialog-img-container>div.container>.main {
-        width: 100vw;
-    }
-    #dialog-img-container>div.container>div.img-container {
-        width: 100%;
-    }
 }
 
 @media screen and (min-width: 1066px) {
@@ -141,29 +129,11 @@
     #bus-park .container .bus .descript ul li {
         font-size: 1.2em;
     }
-    #dialog-img-container .container .btns {
-        display: flex;
-    }
-    #dialog-img-container>div.container>.main {
-        height: 500px;
-    }
-    #dialog-img-container>div.container>div.img-container {
-        width: 800px;
-    }
 }
 
 @media screen and (min-width: 1280px) {
-    #dialog-img-container>div.container>div.img-container {
-        width: 800px;
-    }
-    #dialog-img-container>div.container>.main {
-        height: 500px;
-    }
     #sections {
         width: 1280px;
-    }
-    #dialog-img-container .container .btns {
-        display: flex;
     }
     #reviews .btns-container {
         display: inline-flex;
@@ -550,27 +520,73 @@ main::before {
     height: auto;
 }
 
-#bus-park .container .bus .img:hover {
+#bus-park .container .bus .img-swiper {
+    height: 350px;
+    width: 100%;
+}
+
+#bus-park .container .bus .img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+}
+
+#bus-park .container .bus .img-container:hover {
     cursor: pointer;
 }
 
-#bus-park .container .bus .img {
+#bus-park .container .bus .img-container:active {
+    cursor: grab;
+}
+
+#bus-park .container .bus .img-btn {
+    position: absolute;
+    display: inline-flex;
+    justify-content: space-between;
     width: 100%;
-    height: 350px;
+}
+
+#bus-park .container .bus .img-btn .btn {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #CB1D18;
+}
+
+#bus-park .container .bus .img-container::-webkit-scrollbar {
+    display: none;
+}
+
+#bus-park .container .bus .img-container .img {
+    width: 100% !important;
+    height: 100%;
     display: flex;
     justify-content: center;
     position: relative;
+    flex: none;
 }
 
-#bus-park .container .bus .img::before {
+
+/* #bus-park .container .bus .img-container::before {
     position: absolute;
     content: "Больше фотографий ⮞";
     color: #FFF;
     bottom: 10px;
     z-index: 3;
-}
+} */
 
-#bus-park .container .bus .img .blur {
+#bus-park .container .bus .img-container .blur {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -578,7 +594,7 @@ main::before {
     z-index: 1;
 }
 
-#bus-park .container .bus .img .main {
+#bus-park .container .bus .img-container .main {
     width: auto;
     height: 100%;
     z-index: 2;
@@ -632,84 +648,6 @@ main::before {
     background-color: #fff;
     color: #CB1D18;
     border: 5px solid #CB1D18;
-}
-
-#dialog-img-container {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-}
-
-#dialog-img-container .background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1;
-}
-
-#dialog-img-container .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-}
-
-#dialog-img-container .container .main {
-    margin-bottom: 50px;
-}
-
-#dialog-img-container .container .img-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    overflow: hidden;
-}
-
-#dialog-img-container .container .img-container::-webkit-scrollbar {
-    display: none;
-}
-
-#dialog-img-container .container .img-container img {
-    height: 100px;
-}
-
-#dialog-img-container .container .img-container img:hover {
-    cursor: pointer;
-}
-
-#dialog-img-container .container .img-container img:disabled {
-    cursor: not-allowed;
-}
-
-#dialog-img-container .container .img-container img:not(:first-child) {
-    margin-left: 50px;
-}
-
-#dialog-img-container .container .btns {
-    position: absolute;
-    width: 115%;
-    bottom: 25px;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#dialog-img-container .container .btns .btn {
-    width: 50px;
-    height: 50px;
-    background-color: #CB1D18AA;
-    color: #fff;
-    padding: 0;
 }
 
 

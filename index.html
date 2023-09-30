@@ -6,22 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="assets/scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-    <div id="dialog-img-container">
-        <div class="background"></div>
-        <div class="container">
-            <img class="main" src=""></img>
-            <div class="btns">
-                <button class="btn left"><</button>
-                <button class="btn right">></button>
-            </div>
-            <div class="img-container"></div>
-        </div>
-    </div>
     <header>
         <nav>
             <ul class="ul-container">
@@ -96,175 +86,23 @@
                 <h2 class="section-name">Наш автопарк - к вашим услугам!</h2>
                 <div class="container">
                     <div class="bus">
-                        <div class="img">
-                            <img src="https://vsluh.ru/upload/iblock/26c/qsvrbjll4aibllfiqbtywpgrc046u2tc.jpg" class="blur">
-                            <img src="https://vsluh.ru/upload/iblock/26c/qsvrbjll4aibllfiqbtywpgrc046u2tc.jpg" class="main" alt="bus">
+                        <div class="img-swiper swiper">
+                            <div class="img-container swiper-wrapper">
+                                <div class="img swiper-slide">
+                                    <img src="https://vsluh.ru/upload/iblock/26c/qsvrbjll4aibllfiqbtywpgrc046u2tc.jpg" class="blur">
+                                    <img src="https://vsluh.ru/upload/iblock/26c/qsvrbjll4aibllfiqbtywpgrc046u2tc.jpg" class="main" alt="bus">
+                                </div>
+                                <div class="img swiper-slide">
+                                    <img src="https://5koleso.ru/wp-content/uploads/2023/08/mosgortrans_05.jpg" class="blur">
+                                    <img src="https://5koleso.ru/wp-content/uploads/2023/08/mosgortrans_05.jpg" class="main" alt="bus">
+                                </div>
+
+                            </div>
+
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
-                        <h2 class="name-bus">Автобус Mercedes-Benz Sprinter</h2>
-                        <nav class="descript">
-                            <ul>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-note-sticky"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, praesentium dolor est quisquam consequuntur possimus accusamus rem qui repudiandae voluptas! ipsum dolor
-                                    sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-chair"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-suitcase"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-temperature-quarter"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-tag"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-clock"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                            </ul>
-                        </nav>
-                        <button type="submit" class="btn btn-order">Заказать</button>
-                    </div>
-                    <div class="bus">
-                        <div class="img">
-                            <img src="https://vsluh.ru/upload/iblock/26c/qsvrbjll4aibllfiqbtywpgrc046u2tc.jpg" class="blur">
-                            <img src="https://vsluh.ru/upload/iblock/26c/qsvrbjll4aibllfiqbtywpgrc046u2tc.jpg" class="main" alt="bus">
-                        </div>
-                        <h2 class="name-bus">Автобус Mercedes-Benz Sprinter</h2>
-                        <nav class="descript">
-                            <ul>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-note-sticky"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, praesentium dolor est quisquam consequuntur possimus accusamus rem qui repudiandae voluptas! ipsum dolor
-                                    sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-chair"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-suitcase"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-temperature-quarter"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-tag"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-clock"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                            </ul>
-                        </nav>
-                        <button type="submit" class="btn btn-order">Заказать</button>
-                    </div>
-                    <div class="bus">
-                        <div class="img">
-                            <img src="https://vsluh.ru/upload/iblock/26c/qsvrbjll4aibllfiqbtywpgrc046u2tc.jpg" class="blur">
-                            <img src="https://vsluh.ru/upload/iblock/26c/qsvrbjll4aibllfiqbtywpgrc046u2tc.jpg" class="main" alt="bus">
-                        </div>
-                        <h2 class="name-bus">Автобус Mercedes-Benz Sprinter</h2>
-                        <nav class="descript">
-                            <ul>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-note-sticky"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, praesentium dolor est quisquam consequuntur possimus accusamus rem qui repudiandae voluptas! ipsum dolor
-                                    sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-chair"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-suitcase"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-temperature-quarter"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-tag"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                                <li>
-                                    <strong>
-                                        <i class="fa-solid fa-clock"></i>
-                                        Lorem
-                                    </strong> Lorem ipsum dolor sit amet
-                                </li>
-                            </ul>
-                        </nav>
-                        <button type="submit" class="btn btn-order">Заказать</button>
-                    </div>
-                    <div class="bus">
-                        <div class="img">
-                            <img src="https://vsluh.ru/upload/iblock/26c/qsvrbjll4aibllfiqbtywpgrc046u2tc.jpg" class="blur">
-                            <img src="https://vsluh.ru/upload/iblock/26c/qsvrbjll4aibllfiqbtywpgrc046u2tc.jpg" class="main" alt="bus">
-                        </div>
+
                         <h2 class="name-bus">Автобус Mercedes-Benz Sprinter</h2>
                         <nav class="descript">
                             <ul>
@@ -436,6 +274,10 @@
             </nav>
         </div>
     </footer>
+    <script src="assets/scripts/main.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'; const swiper = new Swiper('.swiper', { direction: 'horizontal', loop: false, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', }, })
+    </script>
 </body>
 
 </html>
