@@ -577,6 +577,11 @@ main::before {
     flex: none;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: #CB1D18;
+}
+
 
 /* #bus-park .container .bus .img-container::before {
     position: absolute;
